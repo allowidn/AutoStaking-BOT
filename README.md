@@ -23,7 +23,7 @@ AutoStaking BOT
 
 1. **Clone The Repositories:**
    ```bash
-   git clone https://github.com/vonssy/AutoStaking-BOT.git
+   git clone https://github.com/allowidn/AutoStaking-BOT.git
    ```
    ```bash
    cd AutoStaking-BOT
