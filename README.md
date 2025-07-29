@@ -1,82 +1,110 @@
-# AutoStaking BOT
-AutoStaking BOT
+# AutoStaking-BOT
 
-- Register Here : [AutoStaking](https://autostaking.pro/?env=pharos)
-- Connect Same Wallet With Pharos
+Automated staking bot for the Autostaking platform on Pharos testnet with intelligent portfolio allocation strategies.
+
 
 ## Features
 
-  - Auto Get Account Information
-  - Auto Run With [Proxyscrape Free Proxy](https://proxyscrape.com/free-proxy-list) - `Choose 1`
-  - Auto Run With Private Proxy - `Choose 2`
-  - Auto Run Without Proxy - `Choose 3`
-  - Auto Rotate Invalid Proxies - `y` or `n`
-  - Auto Claim MockUSD Faucet
-  - Auto Make Staking Tx
-  - Multi Accounts
+- 🚀 Automated staking operations on Autostaking platform
+- 💼 Multiple professional portfolio allocation strategies
+- ⚡ Multi-account support with parallel processing
+- 🔄 Proxy rotation with free and private proxy options
+- 🔐 Secure authentication with asymmetric encryption
+- 📊 Real-time balance monitoring
+- ⏱️ Configurable delays between transactions
+- 🔍 Transaction explorer links for verification
 
-## Requiremnets
+## Requirements
 
-- Make sure you have Python3.9 or higher installed and pip.
+- Python 3.10+
+- Testnet accounts with USDC, USDT, and MockUSD balances
+- Internet connection
+- (Optional) Proxy list for IP rotation
 
-## Instalation
+## Installation
 
-1. **Clone The Repositories:**
-   ```bash
-   git clone https://github.com/allowidn/AutoStaking-BOT.git
-   ```
-   ```bash
-   cd AutoStaking-BOT
-   ```
+1. Clone the repository:
+```bash
+git clone https://github.com/allowidn/AutoStaking-BOT.git
+cd AutoStaking-BOT
+```
 
-2. **Install Requirements:**
-   ```bash
-   pip install -r requirements.txt #or pip3 install -r requirements.txt
-   ```
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-### Note: Check your web3, eth-account, and eth-utils library version first. If not same with version in requirements.txt, u must uninstall that library.
-- **Check Library Version**
-  ```bash
-    pip show libary_name
-  ```
-- **Uninstall Library**
-  ```bash
-    pip uninstall libary_name
-  ```
-- **Install Library With Version**
-  ```bash
-    pip install libary_name==version
-  ```
+3. Add your accounts to `accounts.txt` (one private key per line)
+
+4. (Optional) Add proxies to `proxy.txt` if using private proxies
 
 ## Configuration
 
-- **accounts.txt:** You will find the file `accounts.txt` inside the project directory. Make sure `accounts.txt` contains data that matches the format expected by the script. Here are examples of file formats:
-  ```bash
-    your_private_key_1
-    your_private_key_2
-  ```
+Edit the following parameters directly in the script or configure during runtime:
+- Staking count per wallet
+- USDC/USDT/MockUSD amounts
+- Min/Max delay between transactions
+- Proxy usage options
 
-- **proxy.txt:** You will find the file `proxy.txt` inside the project directory. Make sure `proxy.txt` contains data that matches the format expected by the script. Here are examples of file formats:
-  ```bash
-    ip:port # Default Protcol HTTP.
-    protocol://ip:port
-    protocol://user:pass@ip:port
-  ```
+## Usage
 
-## Run
-
+Run the bot:
 ```bash
-python bot.py #or python3 bot.py
+python bot.py
 ```
 
-## Buy Me a Coffee
+Follow the interactive prompts to configure:
+1. Enter staking count for each wallet
+2. Set token amounts (USDC, USDT, MockUSD)
+3. Configure delay between transactions
+4. Choose proxy option:
+   - Free proxies (automatically fetched)
+   - Private proxies (from proxy.txt)
+   - No proxies
+5. Enable proxy rotation if needed
 
-- **EVM:** 0xe3c9ef9a39e9eb0582e5b147026cae524338521a
-- **TON:** UQBEFv58DC4FUrGqinBB5PAQS7TzXSm5c1Fn6nkiet8kmehB
-- **SOL:** E1xkaJYmAFEj28NPHKhjbf7GcvfdjKdvXju8d8AeSunf
-- **SUI:** 0xa03726ecbbe00b31df6a61d7a59d02a7eedc39fe269532ceab97852a04cf3347
+## Portfolio Strategies
 
-Thank you for visiting this repository, don't forget to contribute in the form of follows and stars.
-If you have questions, find an issue, or have suggestions for improvement, feel free to contact me or open an *issue* in this GitHub repository.
+The bot implements 6 professional portfolio allocation strategies:
 
-**vonssy**
+1. **Balanced Strategy**  
+   Selects 3 products with best combined APY/TVL ranking
+
+2. **High APY Stability**  
+   Focuses on consistent high APY performers
+
+3. **Risk-Adjusted Returns**  
+   Optimizes APY/TVL ratio with 4-product diversification
+
+4. **Conservative Approach**  
+   Capital preservation with established protocols
+
+5. **Aggressive Growth**  
+   Maximizes short-term returns with high APY products
+
+6. **Multi-Strategy Allocation**  
+   Combines TVL leaders, top APY, and risk-adjusted products
+
+## Notes
+
+- Testnet RPC: `https://testnet.dplabs-internal.com/`
+- Contracts:
+  - USDC: `0x72df0bcd7276f2dFbAc900D1CE63c272C4BCcCED`
+  - USDT: `0xD4071393f8716661958F766DF660033b3d35fD29`
+  - MockUSD: `0x7F5e05460F927Ee351005534423917976F92495e`
+  - Staking Router: `0x11cD3700B310339003641Fdce57c1f9BD21aE015`
+  
+- All operations are performed on Pharos testnet
+- Use testnet tokens only
+
+## Disclaimer
+
+This software is provided "as is" without warranty of any kind. Use at your own risk. The developers are not responsible for any financial losses or unintended consequences resulting from the use of this bot. Always test with small amounts first.
+
+## Support
+
+For issues and feature requests, please open an issue on [GitHub](https://github.com/allowidn/AutoStaking-BOT/issues).
+
+---
+
+**Note**: This bot is for educational purposes only. Always comply with the terms of service of the platforms you interact with.
